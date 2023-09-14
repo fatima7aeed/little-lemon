@@ -1,0 +1,43 @@
+/* NavBar.css */
+
+/* Style the navigation container */
+.navbar {
+  background-color: #f4fcfc; /* Background color */
+  color: #000000; /* Text color */
+  padding: 25px; /* Add some padding */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+/* Style the navigation list */
+.navbar-list {
+  list-style-type: none; /* Remove list bullets */
+  margin: 0;
+  padding: 10; /* Remove default list padding */
+  display: flex; /* Display the list items in a row */
+}
+
+/* Style the navigation list items */
+.navbar-item {
+  margin-right: 20px; /* Add some space between items */
+}
+
+/* Style the navigation links */
+.navbar-item a {
+  text-decoration: none; /* Remove underlines from links */
+  color: #000000; /* Link text color */
+  font-weight: bold; /* Make the links bold */
+  transition: color 0.2s; /* Smooth transition for link color change */
+}
+
+/* Style the Little Lemon logo */
+.navbar-logo {
+  max-width: 200px; /* Adjust the maximum width of the logo */
+  vertical-align: middle; /* Center the logo vertically with text */
+}
+
+/* Style navigation links on hover */
+.navbar-item a:hover {
+  color: #fb9261; /* Change link text color on hover */
+}

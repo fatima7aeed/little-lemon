@@ -1,0 +1,105 @@
+/* Footer.css */
+
+/* Style the footer container */
+.footer {
+  background-color: #387563; /* Background color */
+  color: #fff; /* Text color */
+  padding: 20px; /* Add some padding */
+  display: flex;
+  flex-wrap: wrap; /* Wrap children elements if they overflow */
+  justify-content: space-between; /* Space evenly between children */
+  position: relative; /* Set the footer to a relative position */
+}
+
+/* Style the footer pic */
+.footer-pic {
+  max-width: 30%; /* Ensure the image doesn't exceed its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Style the footer content container */
+.footer-navigation,
+.footer-contact,
+.footer-social,
+.footer-copyright {
+  flex: 10; /* Distribute available space evenly among sections */
+  padding: 40px; /* Add padding to separate sections */
+}
+
+/* Style headings in each section */
+.footer-navigation p,
+.footer-contact p,
+.footer-social p,
+.footer-copyright p {
+  font-weight: bold; /* Make headings bold */
+  padding-left: 39px;
+}
+
+/* Style the navigation links */
+.footer-navigation ul,
+.footer-contact ul,
+.footer-social ul {
+  list-style-type: none; /* Remove list bullets */
+  padding: 10; /* Remove default list padding */
+}
+
+/* Style the navigation list items */
+.footer-navigation li,
+.footer-contact li,
+.footer-social li {
+  margin-bottom: 10px; /* Add space between items */
+}
+
+/* Style the navigation links */
+.footer-navigation a,
+.footer-contact a,
+.footer-social a {
+  text-decoration: none; /* Remove underlines from links */
+  color: #fff; /* Link text color */
+  transition: color 0.2s; /* Smooth transition for link color change */
+}
+
+/* Style navigation links on hover */
+.footer-navigation a:hover,
+.footer-contact a:hover,
+.footer-social a:hover {
+  color: #f88e47; /* Change link text color on hover */
+}
+
+/* Style the copyright section */
+.footer-copyright {
+  text-align: center; /* Center-align the text */
+  position: absolute; /* Position it absolutely */
+  bottom: 0; /* Place it at the bottom */
+  left: 0; /* Center it horizontally */
+  width: 100%; /* Make it full-width */
+  padding: 16px; /* Add some padding */
+  color: #ffffff; /* Text color */
+}
+
+/* Style the underlined link in the copyright section */
+.underlined-link {
+  text-decoration: underline;
+  color: #ffffff; /* Text color for the link */
+  transition: color 0.2s; /* Smooth transition for link color change */
+}
+
+/* Style the underlined link on hover */
+.underlined-link:hover {
+  color: #f88e47; /* Change link text color on hover */
+}
+
+/* Style the social media icons */
+.footer-social a i.fa {
+  font-size: 30px; /* Adjust the font size to make the icons bigger */
+  color: #fff; /* Icon color */
+  transition: color 0.2s; /* Smooth transition for icon color change */
+  text-align: center;
+  padding: 2px;
+  padding-left: 25px; 
+}
+
+/* Style social media icons on hover */
+.footer-social a:hover i.fa {
+  color: #f88e47; /* Change icon color on hover */
+}
