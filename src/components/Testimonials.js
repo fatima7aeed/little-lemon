@@ -1,8 +1,8 @@
 function Testimonials() {
     return (
-     <testimonials>
+     <section>
     
-     </testimonials>
+     </section>
      );
     };
     

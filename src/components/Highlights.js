@@ -1,10 +1,10 @@
-function Highlights() {
+function Higlights() {
 return (
- <highlights>
+ <section>
 
- </highlights>
+ </section>
  );
 };
 
 
-export default Highlights; 
+export default Higlights; 
