@@ -8,7 +8,7 @@
   display: flex;
   flex-wrap: wrap; /* Wrap children elements if they overflow */
   justify-content: space-between; /* Space evenly between children */
-  position: relative; /* Set the footer to a relative position */
+  position: absolute; /* Set the footer to a relative position */
 }
 
 /* Style the footer pic */
