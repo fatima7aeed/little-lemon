@@ -1,0 +1,91 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container for the RestaurantSpecials component */
+  .RestaurantSpecials {
+    padding: 20px;
+  }
+  
+  /* Headings */
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Paragraph text */
+  p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Menu link */
+  .menu-link {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  /* Specials container */
+  .specials-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  /* Individual special card */
+  .special {
+    width: calc(33.33% - 10px); /* Three cards per row */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Special image */
+  .special-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  /* Special name */
+  .special-name {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  /* Special description */
+  .special-description {
+    font-size: 16px;
+  }
+  
+  /* "Order a delivery" link */
+  .order-link {
+    font-size: 14px;
+    color: #007bff; /* Link color */
+    text-decoration: underline;
+    margin-top: 10px;
+  }
+  
+  /* Bike image */
+  .bike-image {
+    max-width: 20px;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  
+  /* Hover effect for the SpecialCard */
+  .special:hover {
+    transform: scale(1.05);
+  }
+  
