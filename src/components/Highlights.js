@@ -1,6 +1,14 @@
 import React from 'react';
 import './Highlights.css';
 
+// Import the images directly
+import greekSaladImage from '../images/greek-salad.jpg';
+import bruschettaImage from '../images/bruchetta.svg';
+import lemonDessertImage from '../images/lemon-dessert.jpg';
+
+// Rest of your code remains the same
+
+
 function SpecialCard({ id, name, image, description }) {
   const handleClick = () => {
     // You can navigate to another page here when a card is clicked.
@@ -14,7 +22,9 @@ function SpecialCard({ id, name, image, description }) {
       <img src={image} alt={name} className="special-image" />
       <h3 className="special-name">{name}</h3>
       <p className="special-description">{description}</p>
-      <p className="order-link">Order a delivery <img src="bike.png" alt="Bike" className="bike-image" /></p>
+      <p className="order-link">
+        Order a delivery <img src="./bike.png" alt="Bike" className="bike-image" />
+      </p>
     </div>
   );
 }
@@ -24,20 +34,21 @@ function RestaurantSpecials() {
   const specials = [
     {
       id: 1,
-      name: 'Special 1',
-      image: 'special1.jpg',
-      description: 'Delicious special dish with a unique flavor.',
+      name: 'Greek Salad',
+      image: greekSaladImage, // Use the defined image path
+      description:
+        'A Greek salad is a vibrant and flavorful Mediterranean dish, a delicious combination of fresh veggies, olives, and feta cheese tossed in a zesty dressing.',
     },
     {
       id: 2,
-      name: 'Special 2',
-      image: 'special2.jpg',
+      name: 'Bruschetta',
+      image: bruschettaImage, // Use the defined image path
       description: 'Another fantastic special dish for food lovers.',
     },
     {
       id: 3,
-      name: 'Special 3',
-      image: 'special3.jpg',
+      name: 'Lemon Dessert',
+      image: lemonDessertImage, // Use the defined image path
       description: 'Yet another special dish to delight your taste buds.',
     },
     // Add more specials as needed
