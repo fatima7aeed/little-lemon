@@ -5,7 +5,7 @@ import './Highlights.css';
 import greekSaladImage from '../images/greek-salad.jpg';
 import bruschettaImage from '../images/bruchetta.svg';
 import lemonDessertImage from '../images/lemon-dessert.jpg';
-
+import bikeImage from '../images/bik.png';
 // Rest of your code remains the same
 
 
@@ -23,7 +23,7 @@ function SpecialCard({ id, name, image, description }) {
       <h3 className="special-name">{name}</h3>
       <p className="special-description">{description}</p>
       <p className="order-link">
-        Order a delivery <img src="./bike.png" alt="Bike" className="bike-image" />
+      Order a delivery <img src={bikeImage} alt="Bike" className="bike-image" />
       </p>
     </div>
   );
@@ -43,24 +43,24 @@ function RestaurantSpecials() {
       id: 2,
       name: 'Bruschetta',
       image: bruschettaImage, // Use the defined image path
-      description: 'Another fantastic special dish for food lovers.',
+      description: 'Bruschetta is an Italian appetizer featuring toasted bread topped with a delicious mix of fresh tomatoes, garlic, basil, and olive oil.',
     },
     {
       id: 3,
       name: 'Lemon Dessert',
       image: lemonDessertImage, // Use the defined image path
-      description: 'Yet another special dish to delight your taste buds.',
+      description: 'Indulge in the zesty allure of our Lemon Dessert. This citrus-infused delight combines the refreshing tang of lemons with a lusciously sweet finish.',
     },
     // Add more specials as needed
   ];
 
   return (
     <div>
-      <a href="/menu" className="menu-link">
-        Online Menu
-      </a>
+      <div className="container">
+        <h2>This Week's Specials</h2>
+        <a href="/menu" className="menu-link">Online Menu</a>
+      </div>
 
-      <h2>This Week's Specials</h2>
       <div className="specials-container">
         {specials.map((special) => (
           <SpecialCard key={special.id} {...special} />

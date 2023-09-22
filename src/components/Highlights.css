@@ -1,75 +1,45 @@
-/* Global styles */
-body {
-  font-family: Arial, sans-serif;
-}
-
-/* Container for the RestaurantSpecials component */
-.RestaurantSpecials {
-  padding: 20px;
-}
-
-/* Headings */
-h2 {
-  font-size: 24px;
-  margin: 10px 250px; /* Center horizontally and add vertical margin */
-  text-align: left; /* Align the text to the left */
-}
-
-
-
-/* Paragraph text */
-p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-
 /* Highlights.css */
 
-/* Style the menu link */
-.menu-link {
-  background-color: #ff6600;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  margin-left: auto; /* Push the menu link to the right */
-  margin-top: 10px; /* Add some top margin to separate it from the cards */
-}
-
-
-
-/* Highlights.css */
-
-/* Add a class to the container that holds the special cards */
+/* CSS for .specials-container class */
 .specials-container {
   display: flex; /* Use flexbox to align cards horizontally */
-  justify-content: center; /* Center align cards horizontally */
-  align-items: center; /* Align cards vertically in the center */
+  justify-content: center; /* Center align the cards horizontally */
+  align-items: center; /* Stretch cards to equal height */
   flex-wrap: wrap; /* Wrap to the next line if needed */
 }
 
+/* CSS for .special class */
 .special {
-  width: 20%; /* Adjust the width of each card */
-  margin: 10px; /* Add some margin for spacing */
-  padding: 5px;
-  background-color: #b38f8f;
+  flex: 1; /* Distribute available space evenly among cards horizontally */
+  margin-top: 10px; /* Add margin for spacing (adjust as needed) */
+  margin-right: 50px; /* Reduce the right margin to adjust the space between cards */
+  margin-left: 50px; /* Reduce the left margin to adjust the space between cards */
+  margin-bottom: 10px; /* Add margin for spacing (adjust as needed) */
+  padding: 3px;
+  background-color: #31924e;
   text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgb(221, 207, 15);
+  height: 400px; /* Adjust the height of each card */
+  display: flex;
+  flex-direction: column; /* Ensure the card's content stacks vertically */
+  justify-content: center;
 }
 
+
+/* CSS for .special-image class */
 .special-image {
-  max-width: 100%;
-  height: auto;
+  width: 100%; /* Set a fixed width to make all images the same width */
+  height: 200px; /* Set a fixed height for the images */
+  object-fit: cover; /* Maintain aspect ratio and cover the entire image container */
+  margin: 0 auto; /* Center align the image horizontally */
 }
+
 
 /* Rest of your CSS remains the same */
 
-
 /* Special name */
 .special-name {
-  font-size: 20px;
+  font-size: 25px;
   margin-top: 10px;
   margin-bottom: 5px;
 }
@@ -81,15 +51,16 @@ p {
 
 /* "Order a delivery" link */
 .order-link {
-  font-size: 14px;
-  color: #007bff; /* Link color */
+  font-size: 19px;
+  color: #000000; /* Link color */
   text-decoration: underline;
-  margin-top: 10px;
+  margin-top: auto; /* Push the link to the bottom */
+  margin-bottom: 10px; /* Add some bottom margin to separate it from the card */
 }
 
 /* Bike image */
 .bike-image {
-  max-width: 20px;
+  max-width: 30px;
   vertical-align: middle;
   margin-left: 5px;
 }
@@ -98,3 +69,34 @@ p {
 .special:hover {
   transform: scale(1.05);
 }
+
+/* CSS for the container holding the heading and menu link */
+.container {
+  display: flex; /* Use flexbox to create a row layout */
+  justify-content: space-between; /* Push the heading to the left and menu link to the right */
+  align-items: center; /* Vertically align items in the center */
+}
+
+/* CSS for the menu link */
+.menu-link {
+  background-color: #ff6600; /* Background color for the link */
+  color: #fff; /* Text color for the link */
+  padding: 8px 16px; /* Adjust padding to make the button smaller */
+  text-decoration: none; /* Remove underline from the link */
+  border-radius: 4px; /* Rounded corners for the link */
+  font-weight: bold;
+  font-size: 16px; /* Adjust the font size to your liking */
+}
+
+/* CSS for the heading */
+h2 {
+  font-size: 24px;
+  margin-right: 40px; /* Add right margin to separate the heading from the menu link */
+}
+
+/* Adjust the width of the container as needed */
+.container {
+  max-width: 100%; /* Adjust the maximum width as needed */
+  padding: 50px; /* Add padding to the container */
+}
+
