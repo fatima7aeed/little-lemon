@@ -1,7 +1,5 @@
 import React from 'react';
 import './Highlights.css';
-
-// Import the images directly
 import greekSaladImage from '../images/greek-salad.jpg';
 import bruschettaImage from '../images/bruchetta.svg';
 import lemonDessertImage from '../images/lemon-dessert.jpg';

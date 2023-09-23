@@ -1,0 +1,63 @@
+/* Testimonials section */
+.testimonials {
+    background-color: #338144; /* Background color for the testimonials section */
+    padding: 10px 0; /* Padding around the testimonials section */
+    text-align: center; /* Center-align text within the testimonials section */
+  }
+  
+  .testimonials h2 {
+    font-size: 24px; /* Font size for the section heading */
+    color: #000000; /* Text color for the section heading */
+    margin-bottom: 20px; /* Margin at the bottom of the section heading */
+  }
+  
+  /* Testimonial cards */
+  .testimonial-list {
+    display: flex; /* Use flexbox to arrange testimonial cards horizontally */
+    justify-content: center; /* Space around testimonial cards */
+    flex-wrap: wrap; /* Wrap testimonial cards to a new row on smaller screens */
+  }
+  
+  .testimonial {
+    width: 250px; /* Adjust the width of each testimonial card as needed */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 15px; /* Adjust the padding inside each testimonial card as needed */
+    text-align: left;
+  }
+  
+  .testimonial img {
+    width: 100px; /* Width of user photos */
+    height: 100px; /* Height of user photos */
+    border-radius: 50%; /* Make user photos circular */
+    margin-right: 10px; /* Margin to separate user photo from text */
+    object-fit: cover; /* Maintain aspect ratio for user photos */
+  }
+  
+  .testimonial h3 {
+    font-size: 18px; /* Font size for user names */
+    color: #333; /* Text color for user names */
+    margin: 0; /* Remove margin around user names */
+  }
+  
+  .star-rating {
+    color: #FFD700; /* Gold color for star ratings */
+    font-size: 20px; /* Font size for star ratings */
+    margin-top: 5px; /* Margin at the top of star ratings */
+  }
+  
+  .review {
+    font-size: 16px; /* Font size for testimonial text */
+    color: #666; /* Text color for testimonial text */
+    margin-top: 10px; /* Margin at the top of testimonial text */
+  }
+  
+  /* Media query for responsiveness */
+  @media screen and (max-width: 768px) {
+    .testimonial {
+      width: 100%; /* Make testimonial cards full width on smaller screens */
+    }
+  }
+  
