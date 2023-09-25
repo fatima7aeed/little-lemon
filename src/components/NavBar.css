@@ -1,41 +1,104 @@
-/* Style the navigation container */
+/* Default styles for larger screens */
 .navbar {
-  background-color: #f4fcfc; /* Background color */
-  color: #000000; /* Text color */
-  padding: 25px; /* Add some padding */
+  background-color: #f4fcfc;
+  color: #000000;
+  padding: 25px;
   display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+  justify-content: space-between; /* Space between logo and menu icon */
+  align-items: center;
 }
 
-/* Style the navigation list */
+.navbar-left {
+  display: flex; /* Display logo and menu icon side by side */
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex; /* Display menu icon */
+  align-items: center;
+}
+
 .navbar-list {
-  list-style-type: none; /* Remove list bullets */
+  list-style-type: none;
   margin: 0;
-  padding: 10; /* Remove default list padding */
-  display: flex; /* Display the list items in a row */
+  padding: 0;
+  display: flex;
 }
 
-/* Style the navigation list items */
 .navbar-item {
-  margin-right: 20px; /* Add some space between items */
+  margin-right: 20px;
 }
 
-/* Style the navigation links */
 .navbar-item a {
-  text-decoration: none; /* Remove underlines from links */
-  color: #000000; /* Link text color */
-  font-weight: bold; /* Make the links bold */
-  transition: color 0.2s; /* Smooth transition for link color change */
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  transition: color 0.2s;
 }
 
-/* Style the Little Lemon logo */
 .navbar-logo {
-  max-width: 200px; /* Adjust the maximum width of the logo */
-  vertical-align: middle; /* Center the logo vertically with text */
+  max-width: 200px;
+  vertical-align: middle;
 }
 
-/* Style navigation links on hover */
 .navbar-item a:hover {
-  color: #fb9261; /* Change link text color on hover */
+  color: #fb9261;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+
+  .navbar-left {
+    display: flex; /* Display logo and menu icon side by side */
+    align-items: center;
+  }
+
+  .navbar-list {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  .navbar-item {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  /* Hide the menu items by default on mobile screens */
+  .navbar-list {
+    display: none;
+  }
+
+  /* Style the menu toggle (hamburger menu icon) */
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  /* Rotate bars for open menu */
+  .menu-toggle.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  /* Show the menu items when the menu is open on mobile screens */
+  .navbar-list.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
