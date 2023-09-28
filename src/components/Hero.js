@@ -1,6 +1,6 @@
 import React from 'react';
 import heroImage from '../images/header-pic.jpg';
-import './Header.css';
+import './Hero.css';
 
 function Header() {
   return (
