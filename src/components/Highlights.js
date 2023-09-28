@@ -55,10 +55,9 @@ function RestaurantSpecials() {
   return (
     <div>
       <div className="container">
-        <h2>This Week's Specials</h2>
-        <a href="/menu" className="menu-link">Online Menu</a>
+        <h2 className="special-heading">This Week's Specials</h2>
+        <button className="menu-button">Online Menu</button>
       </div>
-
       <div className="specials-container">
         {specials.map((special) => (
           <SpecialCard key={special.id} {...special} />

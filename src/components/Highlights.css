@@ -1,70 +1,33 @@
-/* Highlights.css */
-
 /* CSS for .specials-container class */
 .specials-container {
   display: flex; /* Use flexbox to align cards horizontally */
-  justify-content: center; /* Center align the cards horizontally */
-  align-items: center; /* Stretch cards to equal height */
   flex-wrap: wrap; /* Wrap to the next line if needed */
+  justify-content: center; /* Center-align the cards horizontally */
+  gap: 20px; /* Add some spacing between cards (adjust as needed) */
 }
 
 /* CSS for .special class */
 .special {
-  flex: 1; /* Distribute available space evenly among cards horizontally */
-  margin-top: 10px; /* Add margin for spacing (adjust as needed) */
-  margin-right: 50px; /* Reduce the right margin to adjust the space between cards */
-  margin-left: 50px; /* Reduce the left margin to adjust the space between cards */
-  margin-bottom: 10px; /* Add margin for spacing (adjust as needed) */
-  padding: 3px;
+  flex: 1;
+  margin: 10px;
+  padding: 10px;
   background-color: #31924e;
   text-align: center;
   box-shadow: 0 0 10px rgb(221, 207, 15);
-  height: 400px; /* Adjust the height of each card */
+  max-width: 300px;
+  min-width: 200px;
+  border-radius: 10px;
   display: flex;
-  flex-direction: column; /* Ensure the card's content stacks vertically */
-  justify-content: center;
+  flex-direction: column; /* Stack card content vertically */
+  justify-content: space-between; /* Push content to the top and bottom */
 }
-
-
 /* CSS for .special-image class */
 .special-image {
-  width: 100%; /* Set a fixed width to make all images the same width */
+  width: 100%;
   height: 200px; /* Set a fixed height for the images */
-  object-fit: cover; /* Maintain aspect ratio and cover the entire image container */
-  margin: 0 auto; /* Center align the image horizontally */
+  object-fit: cover;
+  margin: 0 auto;
 }
-
-
-/* Rest of your CSS remains the same */
-
-/* Special name */
-.special-name {
-  font-size: 25px;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-/* Special description */
-.special-description {
-  font-size: 16px;
-}
-
-/* "Order a delivery" link */
-.order-link {
-  font-size: 19px;
-  color: #000000; /* Link color */
-  text-decoration: underline;
-  margin-top: auto; /* Push the link to the bottom */
-  margin-bottom: 10px; /* Add some bottom margin to separate it from the card */
-}
-
-/* Bike image */
-.bike-image {
-  max-width: 30px;
-  vertical-align: middle;
-  margin-left: 5px;
-}
-
 /* Hover effect for the SpecialCard */
 .special:hover {
   transform: scale(1.05);
@@ -72,31 +35,48 @@
 
 /* CSS for the container holding the heading and menu link */
 .container {
-  display: flex; /* Use flexbox to create a row layout */
-  justify-content: space-between; /* Push the heading to the left and menu link to the right */
-  align-items: center; /* Vertically align items in the center */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  padding: 20px;
 }
 
-/* CSS for the menu link */
-.menu-link {
-  background-color: #ff6600; /* Background color for the link */
-  color: #fff; /* Text color for the link */
-  padding: 8px 16px; /* Adjust padding to make the button smaller */
-  text-decoration: none; /* Remove underline from the link */
-  border-radius: 4px; /* Rounded corners for the link */
-  font-weight: bold;
-  font-size: 16px; /* Adjust the font size to your liking */
+/* CSS for .menu-link (Online Menu button) */
+.menu-button {
+  background-color: #ff6600;
+  color: #fff;
+  font-size: 16px; /* Match the font size of the regular button */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 100px;
+  margin-bottom: 10px;
+  margin-right: 21%;
 }
-
 /* CSS for the heading */
-h2 {
+.special-heading {
   font-size: 24px;
-  margin-right: 40px; /* Add right margin to separate the heading from the menu link */
+  margin: 100px;
+  margin-left: 21%;
+  margin-bottom: 10px; /* Add bottom margin to separate the heading from the cards */
 }
 
-/* Adjust the width of the container as needed */
-.container {
-  max-width: 100%; /* Adjust the maximum width as needed */
-  padding: 50px; /* Add padding to the container */
-}
 
+
+/* CSS for .bike-image class */
+.bike-image {
+  max-width: 30px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+/* CSS for .order-link */
+.order-link {
+  font-size: 19px;
+  color: #000000;
+  text-decoration: underline;
+  margin-top: 10px;
+  margin-bottom: 10px; /* Add margin at the bottom to separate it from the card */
+}
