@@ -1,80 +1,107 @@
-/* Footer.css */
-
-/* Style the footer container */
+/* Add media queries for responsiveness */
 .footer {
-  background-color: #387563; /* Background color */
-  color: #fff; /* Text color */
-  padding: 20px; /* Add some padding */
+  background-color: #387563;
+  color: #fff;
+  padding: 20px 0;
   display: flex;
-  flex-wrap: wrap; /* Wrap children elements if they overflow */
-  justify-content: space-between; /* Space evenly between children */
-  position: absolute; /* Set the footer to a relative position */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: absolute; 
 }
 
 /* Style the footer pic */
 .footer-pic {
-  max-width: 30%; /* Ensure the image doesn't exceed its container */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 30%; /* Set the maximum width of the image for desktop */
+  height: auto;
+  width: auto; /* Reset width and height */
+  margin-right: 20px; /* Add some space to the right of the image for desktop */
+  margin-left: 20px;
 }
 
-/* Style the footer content container */
-.footer-navigation,
-.footer-contact,
-.footer-social,
-.footer-copyright {
-  flex: 10; /* Distribute available space evenly among sections */
-  padding: 40px; /* Add padding to separate sections */
+.footer-navigation {
+  flex: 1;
+  max-width: 200px;
 }
 
-/* Style headings in each section */
-.footer-navigation p,
-.footer-contact p,
-.footer-social p,
-.footer-copyright p {
-  font-weight: bold; /* Make headings bold */
-  padding-left: 39px;
+.footer-navigation p {
+  font-size: 16px;
+  font-weight: bold;
 }
 
-/* Style the navigation links */
-.footer-navigation ul,
-.footer-contact ul,
+.footer-navigation ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-navigation li {
+  margin-bottom: 10px;
+}
+
+.footer-navigation a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-contact {
+  flex: 1;
+  max-width: 300px;
+}
+
+.footer-contact p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-contact li {
+  margin-bottom: 10px;
+}
+
+.footer-contact strong {
+  color: #f6c23e;
+}
+
+.footer-contact a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-social {
+  flex: 1;
+  max-width: 200px;
+}
+
+.footer-social p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .footer-social ul {
-  list-style-type: none; /* Remove list bullets */
-  padding: 10; /* Remove default list padding */
+  list-style: none;
+  padding: 0;
 }
 
-/* Style the navigation list items */
-.footer-navigation li,
-.footer-contact li,
 .footer-social li {
-  margin-bottom: 10px; /* Add space between items */
+  margin-bottom: 10px;
 }
 
-/* Style the navigation links */
-.footer-navigation a,
-.footer-contact a,
 .footer-social a {
-  text-decoration: none; /* Remove underlines from links */
-  color: #fff; /* Link text color */
-  transition: color 0.2s; /* Smooth transition for link color change */
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 10px;
 }
 
-/* Style navigation links on hover */
-.footer-navigation a:hover,
-.footer-contact a:hover,
-.footer-social a:hover {
-  color: #f88e47; /* Change link text color on hover */
-}
-
-/* Style the copyright section */
 .footer-copyright {
-  text-align: center; /* Center-align the text */
-  position: absolute; /* Position it absolutely */
-  bottom: 0; /* Place it at the bottom */
-  left: 0; /* Center it horizontally */
-  width: 100%; /* Make it full-width */
-  padding: 16px; /* Add some padding */
-  color: #ffffff; /* Text color */
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
 }
 
 /* Style the underlined link in the copyright section */
@@ -89,17 +116,37 @@
   color: #f88e47; /* Change link text color on hover */
 }
 
-/* Style the social media icons */
-.footer-social a i.fa {
-  font-size: 30px; /* Adjust the font size to make the icons bigger */
-  color: #fff; /* Icon color */
-  transition: color 0.2s; /* Smooth transition for icon color change */
-  text-align: center;
-  padding: 2px;
-  padding-left: 25px; 
+/* Style navigation links on hover */
+.footer-navigation a:hover,
+.footer-contact a:hover,
+.footer-social a:hover {
+  color: #f88e47; /* Change link text color on hover */
+}
+/* Media Query for screens smaller than 768px */
+@media screen and (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-pic {
+    max-width: 100%; /* Remove the max-width property */
+    width: 50%; /* Set the width to make the image larger */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+
+  .footer-navigation,
+  .footer-contact,
+  .footer-social {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .footer-navigation ul,
+  .footer-contact ul,
+  .footer-social ul {
+    padding-left: 0;
+  }
 }
 
-/* Style social media icons on hover */
-.footer-social a:hover i.fa {
-  color: #f88e47; /* Change icon color on hover */
-}
