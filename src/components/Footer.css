@@ -16,6 +16,7 @@
   width: auto; /* Reset width and height */
   margin-right: 20px; /* Add some space to the right of the image for desktop */
   margin-left: 20px;
+  border-radius: 5%;
 }
 
 .footer-navigation {
@@ -123,7 +124,7 @@
   color: #f88e47; /* Change link text color on hover */
 }
 /* Media Query for screens smaller than 768px */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
   .footer {
     flex-direction: column;
     align-items: center;

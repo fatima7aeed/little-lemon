@@ -1,0 +1,57 @@
+/* Base styles for the About Component */
+.about {
+    padding: 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.photos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.photos img {
+    width: 40%;
+    height: auto;
+    border-radius: 5%;
+    object-fit: cover;
+    border: 2px solid #3498db;
+}
+
+/* Media query for screens with a max-width of 768px (adjust as needed) */
+
+
+
+/* Media query for screens with a max-width of 768px (adjust as needed) */
+@media (max-width: 768px) {
+    .about {
+        display: block; /* Stack content on smaller screens */
+        text-align: left; /* Align text to the left */
+    }
+
+    .photos {
+        display: flex;
+        flex-direction: column; /* Stack photos vertically */
+        align-items: center; /* Center align photos */
+    }
+
+    .photos img {
+        width: 70%; /* Take full width of the container */
+        max-width: 100%; /* Ensure the image doesn't exceed its original size */
+        margin-top: 10px; /* Add some space between photos */
+    }
+}
