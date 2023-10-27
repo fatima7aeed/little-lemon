@@ -1,6 +1,8 @@
 import React from 'react';
 import footerpic from '../images/footer-pic.jpg';
 import './Footer.css';
+import 'font-awesome/css/font-awesome.min.css';
+
 
 function Footer() {
   return (
