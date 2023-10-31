@@ -1,13 +1,14 @@
+// BookingForm.js
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
-function BookingForm() {
-  // Define state variables to store user input
+function BookingForm({ submitForm }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
+  const history = useHistory();
 
-  // Event handlers for input changes
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
@@ -24,14 +25,18 @@ function BookingForm() {
     setSelectedTime(e.target.value);
   };
 
-  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here, you can handle the form data, e.g., send it to a server or perform other actions
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Date:', selectedDate);
-    console.log('Time:', selectedTime);
+
+    const formData = {
+      name,
+      email,
+      selectedDate,
+      selectedTime,
+    };
+
+    submitForm(formData);
+    history.push('/ConfirmedBooking');
   };
 
   return (
@@ -61,7 +66,14 @@ function BookingForm() {
             <option value="6:00 PM">6:00 PM</option>
           </select>
         </div>
-        <button type="submit">Book Now</button>
+        <a
+          className="reserve-now"
+          href="/ConfirmedBooking"
+          // target="_blank"
+          rel="noopener noreferrer"
+        >
+          Reserve Now
+        </a>
       </form>
     </div>
   );

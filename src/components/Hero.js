@@ -18,7 +18,7 @@ function Header() {
         <a
           className="reserve-button"
           href="/booking"
-          target="_blank"
+          // target="_blank"
           rel="noopener noreferrer"
         >
           Reserve a Table
