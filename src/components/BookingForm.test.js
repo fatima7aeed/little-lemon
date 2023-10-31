@@ -1,21 +1,30 @@
-import { initializeTimes, updateTimes } from './yourUtils'; // Import your utility functions
+import { render, screen, fireEvent } from '@testing-library/react';
+import BookingForm from './BookingForm';
 
-// Test for initializeTimes
-test('initializeTimes should return an array of available times', () => {
-  // Mock the fetchAPI function to return a non-empty array of available times
-  jest.spyOn(global, 'fetch').mockResolvedValue({
-    json: () => Promise.resolve(['10:00', '12:00', '14:00', '16:00']),
-  });
+test('HTML5 validation attributes should be applied', () => {
+  render(<BookingForm />);
 
-  return initializeTimes().then((times) => {
-    const expectedTimes = ['10:00', '12:00', '14:00', '16:00'];
-    expect(times).toEqual(expectedTimes); // Compare the result with the expected times
-  });
+  const nameInput = screen.getByLabelText('Name');
+  const emailInput = screen.getByLabelText('Email');
+  const dateInput = screen.getByLabelText('Select a Date');
+  const timeSelect = screen.getByLabelText('Select a Time');
+
+  expect(nameInput).toHaveAttribute('required');
+  expect(emailInput).toHaveAttribute('required');
+  expect(dateInput).toHaveAttribute('required');
+  expect(timeSelect).toHaveAttribute('required');
 });
 
-// Test for updateTimes
-test('updateTimes should return the same times provided in the state', () => {
-  const initialState = ['17:00', '18:00', '19:00'];
-  const updatedTimes = updateTimes(initialState); // Call the updateTimes function with initialState
-  expect(updatedTimes).toEqual(initialState); // Ensure that the result is the same as the initialState
+test('validateName should return true for a valid name', () => {
+  const validName = 'John Doe';
+  const isValid = validateName(validName);
+  expect(isValid).toBe(true);
 });
+
+test('validateName should return false for an invalid name', () => {
+  const invalidName = '';
+  const isValid = validateName(invalidName);
+  expect(isValid).toBe(false);
+});
+
+// Similar tests for other validation functions
