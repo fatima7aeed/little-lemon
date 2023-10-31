@@ -2,10 +2,15 @@ import { initializeTimes, updateTimes } from './yourUtils'; // Import your utili
 
 // Test for initializeTimes
 test('initializeTimes should return an array of available times', () => {
-  const times = initializeTimes(); // Call the initializeTimes function
-  // Replace the expectedTimes array with your expected initial times
-  const expectedTimes = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
-  expect(times).toEqual(expectedTimes); // Compare the result with the expected times
+  // Mock the fetchAPI function to return a non-empty array of available times
+  jest.spyOn(global, 'fetch').mockResolvedValue({
+    json: () => Promise.resolve(['10:00', '12:00', '14:00', '16:00']),
+  });
+
+  return initializeTimes().then((times) => {
+    const expectedTimes = ['10:00', '12:00', '14:00', '16:00'];
+    expect(times).toEqual(expectedTimes); // Compare the result with the expected times
+  });
 });
 
 // Test for updateTimes
